@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(63, 57, 57);
+    color: #f4a261;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(63, 57, 57);
+}
+
+.logo img {
+    width: 60px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(214, 205, 205);
+    font-size: 1.2em;
+}
+
+/* Main Section */
+main {
+    flex: 1; /* Makes main grow and push footer to bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Controls spacing between buttons */
+}
+
+main a {
+    text-decoration: none;
+   
+}
+
+main h1 {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        90deg, 
+        #1d1716, 
+        #402a23, 
+        #a55233, 
+        #f3bc77
+    );
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s ease infinite;
+    display: inline-block;
+    font-size: 2.5em;
+    letter-spacing: 0.4rem;
+    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+    padding-bottom: 30px;
+}
+
+/* Zoom effect on hover */
+main h1:hover {
+    transform: scale(1.2); /* Increases the size of the text to 120% */
+}
+
+/* Smooth Transition Animation for Gradient */
+@keyframes textclip {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: rgb(247, 168, 130);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1em;
+    color: #2E2B2B;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #2E2B2B;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+}
